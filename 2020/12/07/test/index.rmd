@@ -6,7 +6,8 @@ slug: test
 categories: []
 tags: []
 ---
-
-```{}
-aa
+```{r}
+a = 1
+b = 2
+paste(a+b)
 ```
