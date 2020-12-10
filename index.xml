@@ -7,45 +7,16 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>test</title>
-        <link>https://kamui.netlify.app/p/test/</link>
+        <title>Fisrt Post</title>
+        <link>https://kamui.netlify.app/p/fisrt-post/</link>
         <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://kamui.netlify.app/p/test/</guid>
-        <description>
-&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;test&lt;/p&gt;
+        <guid>https://kamui.netlify.app/p/fisrt-post/</guid>
+        <description>&lt;p&gt;Test R Script dulu&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Alhamdulillah bisa bikin postngan pertama hehehe :D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Alhamdulillah bisa bikin postngan pertama hehehe :D&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sip mantap&amp;hellip;&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>test 2</title>
-        <link>https://kamui.netlify.app/p/test-2/</link>
-        <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://kamui.netlify.app/p/test-2/</guid>
-        <description>
-&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;asdasd&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>test 3</title>
-        <link>https://kamui.netlify.app/p/test-3/</link>
-        <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://kamui.netlify.app/p/test-3/</guid>
-        <description>&lt;p&gt;igkgjg&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;## [1] 6
-&lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         
     </channel>

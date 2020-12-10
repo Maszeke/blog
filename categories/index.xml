@@ -5,13 +5,14 @@
     <link>https://kamui.netlify.app/categories/</link>
     <description>Recent content in Categories on Kamui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://kamui.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://kamui.netlify.app/categories/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>First</title>
+      <link>https://kamui.netlify.app/categories/first/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kamui.netlify.app/categories/test/</guid>
+      <guid>https://kamui.netlify.app/categories/first/</guid>
       <description></description>
     </item>
     
