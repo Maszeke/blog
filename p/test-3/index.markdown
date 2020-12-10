@@ -7,3 +7,15 @@ categories: []
 tags: []
 ---
 igkgjg
+
+
+```r
+a = 1
+b = 5
+a + b
+```
+
+```
+## [1] 6
+```
+
