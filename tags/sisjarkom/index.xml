@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Kamui</title>
-    <link>https://kamui.netlify.app/post/</link>
-    <description>Recent content in Posts on Kamui</description>
+    <title>Sisjarkom on Kamui</title>
+    <link>https://kamui.netlify.app/tags/sisjarkom/</link>
+    <description>Recent content in Sisjarkom on Kamui</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fisrt Post</title>
-      <link>https://kamui.netlify.app/p/fisrt-post/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kamui.netlify.app/p/fisrt-post/</guid>
-      <description>Test R Script dulu
-paste(&amp;#39;Alhamdulillah bisa bikin postngan pertama hehehe :D&amp;#39;) ## [1] &amp;quot;Alhamdulillah bisa bikin postngan pertama hehehe :D&amp;quot;Sip mantap&amp;hellip;</description>
-    </item>
-    
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/tags/sisjarkom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementasi Loadbalancing Server Dengan Reverse Proxy Apache di Centos 7</title>
       <link>https://kamui.netlify.app/p/implementasi-loadbalancing-server-dengan-reverse-proxy-apache-di-centos-7/</link>

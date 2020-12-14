@@ -18,6 +18,133 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sip mantap&amp;hellip;&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>Implementasi Loadbalancing Server Dengan Reverse Proxy Apache di Centos 7</title>
+        <link>https://kamui.netlify.app/p/implementasi-loadbalancing-server-dengan-reverse-proxy-apache-di-centos-7/</link>
+        <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://kamui.netlify.app/p/implementasi-loadbalancing-server-dengan-reverse-proxy-apache-di-centos-7/</guid>
+        <description>&lt;p&gt;Selain web server, Apache juga dapat dikonfigurasi sebagai &lt;strong&gt;Reverse Proxy&lt;/strong&gt; untuk membuat cluster load balancing dari dua atau lebih server web. Fungsionalitas ini dapat ditambahkan ke Apache melalui modul &lt;strong&gt;mod_proxy&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
+&lt;p&gt;Untuk dapat mengikuti tutorial ini, Anda harus mempersiapkan beberapa hal sebagai berikut :&lt;/p&gt;
+&lt;h4 id=&#34;menyiapkan-sistem-operasi&#34;&gt;Menyiapkan Sistem Operasi&lt;/h4&gt;
+&lt;p&gt;Dalam implementasinya tidak dianjurkan untuk menggunakan loadbalancing pada satu komputer yang sama. Namun, sebagai latihan tutorial ini menggunakan tiga buah virtual machine dengan virtualbox dengan spesifikasi sebagai berikut :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hostname&lt;/th&gt;
+&lt;th&gt;IP Address&lt;/th&gt;
+&lt;th&gt;OS&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Centos 7 loadbalancer&lt;/td&gt;
+&lt;td&gt;192.168.43.71&lt;/td&gt;
+&lt;td&gt;Centos 7 64 bit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Centos 7 Server 1&lt;/td&gt;
+&lt;td&gt;192.168.43.92&lt;/td&gt;
+&lt;td&gt;Centos 7 64 bit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Centos 7 Server 2&lt;/td&gt;
+&lt;td&gt;192.168.43.65&lt;/td&gt;
+&lt;td&gt;Centos 7 64 bit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;install-essential-tools&#34;&gt;Install Essential Tools&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;net-tools&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;yum install net-tools
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;nano&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;yum install nano
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;install-apache&#34;&gt;Install Apache&lt;/h4&gt;
+&lt;p&gt;Install apache server untuk ketiga virtual machine yang sudah disediakan sebelumnya dengan perintah&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Install apache&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;yum install httpd 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Enable service httpd&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;systemctl enable httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Start service httpd&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;systemctl start httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Buka firewall service http/port 80&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;firewall-cmd --permanent --add-service=http
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Reload Firewall&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pastikan ketiga server tersebut bisa diakses dari luar VM. Akses http://(ip / domain)/ pada browser komputer. contoh http://192.168.43.71/&lt;/p&gt;
+&lt;h2 id=&#34;konfigurasi-loadbalancer&#34;&gt;Konfigurasi Loadbalancer&lt;/h2&gt;
+&lt;p&gt;Apache HTTP Server membutuhkan modul &lt;strong&gt;mod_proxy&lt;/strong&gt; agar dapat berfungsi sebagai Load Balancer. Modul &lt;strong&gt;mod_proxy&lt;/strong&gt; sudah tersedia dalam paket httpd, oleh karena itu secara otomatis terinstall Bersama Apache HTTP Server pada CentOS 7.&lt;/p&gt;
+&lt;p&gt;Gunakan perintah berikut untuk memverifikasi ketersediaan &lt;strong&gt;mod_proxy&lt;/strong&gt; pada server loadbalancer.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;httpd –M | grep proxy
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Buat sebuah file konfigurasi pada server loadbalancer dengan perintah berikut&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;nano /etc/httpd/conf.d/lbsisjarkom.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Masukkan script konfigurasi berikut ini&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;&amp;lt;proxy balancer://mycluster&amp;gt;
+    BalancerMember http://192.168.43.92:80
+    BalancerMember http://192.168.43.65:80
+    ProxySet lbmethod=byrequests
+&amp;lt;/proxy&amp;gt;
+
+&amp;lt;Location /balancer-manager&amp;gt;
+    SetHandler balancer-manager
+    allow from all
+&amp;lt;/Location&amp;gt;
+
+ProxyPass /balancer-manager !
+ProxyPass / balancer://mycluster/
+ProxyPassReverse / balancer://mycluster/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart service httpd dengan perintah berikut&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;systemctl restart httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Akses Loadbalancer melalui browser&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;http://192.168.43.71/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Akses loadbaancer manager&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;http://192.168.43.71/balancer-manager
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;konfigurasi-server-1-dan-server-2&#34;&gt;Konfigurasi Server 1 dan Server 2&lt;/h2&gt;
+&lt;p&gt;Buat sebuah file html pada server 1 dan server 2 dengan perintah berikut&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;nano /var/www/html/index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Masukkan Script berikut kedalam file index.html yang sudah dibuat&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Server 1&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; Selamat Datang di Server 1&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;server 2 menyesuaikan&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Akses Loadbalancer melalui browser&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;http://192.168.43.71/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reload browser, Loadbalancer akan mengakses server 1 dan server 2 secara bergantian&lt;/p&gt;
+&lt;h2 id=&#34;bagaimana-jika-salah-satu-server-mati-&#34;&gt;Bagaimana jika salah satu server mati ?&lt;/h2&gt;
+&lt;p&gt;Matikan salah satu server dengan perintah berikut&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;systemctl stop httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Maka loadbalancer akan mengakses server yang masih aktif dan server yang mati statusnya akan error&lt;/p&gt;
+&lt;h2 id=&#34;bagaimana-jika-kedua-server-mati-&#34;&gt;Bagaimana jika kedua server mati ?&lt;/h2&gt;
+&lt;p&gt;Matikan kedua server dan reload browsernya maka status kedua server menjadi error dan akan muncul status error 503 Service Unavailable&lt;/p&gt;
+&lt;h2 id=&#34;mengamankan-balancer-manager&#34;&gt;Mengamankan Balancer Manager&lt;/h2&gt;
+&lt;p&gt;Buat user baru pada sistem&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;htpasswd -c /etc/httpd/htpasswd admin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ganti kode pada file konfigurasi loadbalancer&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;nano /etc/httpd/conf.d/lbsisjarkom.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ganti&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;&amp;lt;Location /balancer-manager&amp;gt;
+    SetHandler balancer-manager
+    allow from all
+&amp;lt;/Location&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Menjadi&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;&amp;lt;location &amp;quot;/balancer-manager&amp;quot;&amp;gt; 
+    SetHandler balancer-manager 
+    AuthType &amp;quot;basic&amp;quot; 
+    AuthName &amp;quot;balancer-manager&amp;quot; 
+    AuthUserFile /etc/httpd/htpasswd 
+    Require valid-user 
+&amp;lt;/location&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart service httpd dengan perintah berikut&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{}&#34; data-lang=&#34;{}&#34;&gt;systemctl restart httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Akses Loadbalancer manager, maka nanti akan muncul jendela untuk melakukan auntentikasi&lt;/p&gt;
+</description>
+        </item>
         
     </channel>
 </rss>

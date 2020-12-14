@@ -16,5 +16,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Loadbalancer</title>
+      <link>https://kamui.netlify.app/categories/loadbalancer/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kamui.netlify.app/categories/loadbalancer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sisjarkom</title>
+      <link>https://kamui.netlify.app/categories/sisjarkom/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kamui.netlify.app/categories/sisjarkom/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
