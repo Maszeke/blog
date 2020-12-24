@@ -6,7 +6,27 @@
         <description>Recent content on Kamui</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>KOMSTAT 8 : Distribusi Peluang</title>
+        <link>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</link>
+        <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</guid>
+        <description>&lt;h1 id=&#34;proses-bernoulli&#34;&gt;Proses Bernoulli&lt;/h1&gt;
+&lt;p&gt;Suatu eksperimen biasanya dilakukan percobaan secara berulang-ulang. Setiap perulangan tersebut menghasilkan dua kemungkinan hasil yaitu berhasil atau gagal. Proses ini kemudian disebut sebagai proses bernoulli &lt;em&gt;(Bernoulli Process)&lt;/em&gt;. Setiap percobaannya disebut sebagai percobaan bernoulli &lt;em&gt;(Bernoulli Trial)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Proses Bernoulli harus memiliki sifat-sifat berikut berikut:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Percobaan terdiri dari percobaan berulang.&lt;/li&gt;
+&lt;li&gt;Setiap percobaan hasilnya dapat diklasifikasikan sebagai sukses atau gagal.&lt;/li&gt;
+&lt;li&gt;Probabilitas keberhasilan, dilambangkan dengan p dan tetap konstan dari percobaan ke percobaan.&lt;/li&gt;
+&lt;li&gt;Uji coba berulang bersifat independen.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;distribusi-binomial&#34;&gt;Distribusi Binomial&lt;/h1&gt;
+&lt;p&gt;Jumlah X keberhasilan dalam n percobaan Bernoulli disebut binomial random variable.
+Selanjutnya, distribusi probabilitas random variable diskrit ini disebut distribusi binomial dimana nilainya akan dilambangkan dengan &lt;code&gt;\(b(x; n, p)\)&lt;/code&gt; karena bergantung pada jumlah percobaan dan probabilitas keberhasilan pada percobaan tertentu.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Fisrt Post</title>
         <link>https://kamui.netlify.app/p/fisrt-post/</link>
         <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>

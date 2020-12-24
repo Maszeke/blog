@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Kamui</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KOMSTAT 8 : Distribusi Peluang</title>
+      <link>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</guid>
+      <description>Proses Bernoulli Suatu eksperimen biasanya dilakukan percobaan secara berulang-ulang. Setiap perulangan tersebut menghasilkan dua kemungkinan hasil yaitu berhasil atau gagal. Proses ini kemudian disebut sebagai proses bernoulli (Bernoulli Process). Setiap percobaannya disebut sebagai percobaan bernoulli (Bernoulli Trial).
+Proses Bernoulli harus memiliki sifat-sifat berikut berikut:
+ Percobaan terdiri dari percobaan berulang. Setiap percobaan hasilnya dapat diklasifikasikan sebagai sukses atau gagal. Probabilitas keberhasilan, dilambangkan dengan p dan tetap konstan dari percobaan ke percobaan.</description>
+    </item>
+    
     <item>
       <title>Fisrt Post</title>
       <link>https://kamui.netlify.app/p/fisrt-post/</link>

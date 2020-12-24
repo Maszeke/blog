@@ -1,0 +1,21 @@
+---
+title: 'KOMSTAT 8 : Distribusi Peluang'
+author: ~
+date: '2020-12-24'
+slug: komstat-8-distribusi-peluang
+categories: [Komstat]
+tags: [Komstat]
+description : 'Ringkasan materi pertemuan 8 mata kuliah Komputasi Statitik D4 KS - Distribusi Peluang'  
+---
+# Proses Bernoulli
+Suatu eksperimen biasanya dilakukan percobaan secara berulang-ulang. Setiap perulangan tersebut menghasilkan dua kemungkinan hasil yaitu berhasil atau gagal. Proses ini kemudian disebut sebagai proses bernoulli *(Bernoulli Process)*. Setiap percobaannya disebut sebagai percobaan bernoulli *(Bernoulli Trial)*.
+
+Proses Bernoulli harus memiliki sifat-sifat berikut berikut:
+1. Percobaan terdiri dari percobaan berulang.
+2. Setiap percobaan hasilnya dapat diklasifikasikan sebagai sukses atau gagal.
+3. Probabilitas keberhasilan, dilambangkan dengan p dan tetap konstan dari percobaan ke percobaan.
+4. Uji coba berulang bersifat independen.
+
+# Distribusi Binomial
+Jumlah X keberhasilan dalam n percobaan Bernoulli disebut binomial random variable.
+Selanjutnya, distribusi probabilitas random variable diskrit ini disebut distribusi binomial dimana nilainya akan dilambangkan dengan `\(b(x; n, p)\)` karena bergantung pada jumlah percobaan dan probabilitas keberhasilan pada percobaan tertentu.

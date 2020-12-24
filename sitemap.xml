@@ -4,7 +4,37 @@
   
   <url>
     <loc>https://kamui.netlify.app/categories/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/tags/komstat/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/categories/komstat/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/post/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/tags/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +58,6 @@
   </url>
   
   <url>
-    <loc>https://kamui.netlify.app/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kamui.netlify.app/tags/loadbalancer/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
@@ -43,22 +68,12 @@
   </url>
   
   <url>
-    <loc>https://kamui.netlify.app/post/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kamui.netlify.app/tags/sisjarkom/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kamui.netlify.app/categories/sisjarkom/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kamui.netlify.app/tags/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   

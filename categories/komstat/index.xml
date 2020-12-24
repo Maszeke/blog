@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Komstat on Kamui</title>
+    <link>https://kamui.netlify.app/categories/komstat/</link>
+    <description>Recent content in Komstat on Kamui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/categories/komstat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KOMSTAT 8 : Distribusi Peluang</title>
+      <link>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</guid>
+      <description>Proses Bernoulli Suatu eksperimen biasanya dilakukan percobaan secara berulang-ulang. Setiap perulangan tersebut menghasilkan dua kemungkinan hasil yaitu berhasil atau gagal. Proses ini kemudian disebut sebagai proses bernoulli (Bernoulli Process). Setiap percobaannya disebut sebagai percobaan bernoulli (Bernoulli Trial).
+Proses Bernoulli harus memiliki sifat-sifat berikut berikut:
+ Percobaan terdiri dari percobaan berulang. Setiap percobaan hasilnya dapat diklasifikasikan sebagai sukses atau gagal. Probabilitas keberhasilan, dilambangkan dengan p dan tetap konstan dari percobaan ke percobaan.</description>
+    </item>
+    
+  </channel>
+</rss>
