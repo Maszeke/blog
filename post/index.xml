@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Kamui</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kamui.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UAS Komputasi Statistik 2019 D4KS Nomor 1</title>
+      <link>https://kamui.netlify.app/p/uas-komputasi-statistik-2019-d4ks-nomor-1/</link>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kamui.netlify.app/p/uas-komputasi-statistik-2019-d4ks-nomor-1/</guid>
+      <description>Soal Dari library(nycflights13), gunakan dataset flights, airports, airlines, planes, dan weather. Kemudian lakukan :
+ Buat bar-chart untuk urutan 10 maskapai penerbangan airlines (lengkap dengan nama maskapainya) dengan rata-rata waktu keterlambatan keberangkatan (departure delay) paling lama Uji apakah terdapat beda rata-rata jarak yang ditempuh dari pesawat yang dibuat sebelum tahun 2000 dan setelah (termasuk) tahun 2000 Uji apakah terdapat beda rata-rata waktu keterlambatan keberangkatan dari empat musim (winter: oct-jan, spring: feb-may, summer: june-sept).</description>
+    </item>
+    
     <item>
       <title>KOMSTAT 8 : Distribusi Peluang</title>
       <link>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</link>

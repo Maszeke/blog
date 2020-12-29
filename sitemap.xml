@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kamui.netlify.app/categories/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+    <loc>https://kamui.netlify.app/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kamui.netlify.app/</loc>
+    <loc>https://kamui.netlify.app/post/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/p/uas-komputasi-statistik-2019-d4ks-nomor-1/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kamui.netlify.app/categories/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,11 +34,6 @@
   
   <url>
     <loc>https://kamui.netlify.app/p/komstat-8-distribusi-peluang/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kamui.netlify.app/post/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
   
